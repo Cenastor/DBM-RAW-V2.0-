@@ -1,0 +1,185 @@
+{
+    "name": "deposit",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "SEND_MESSAGES",
+    "restriction": "1",
+    "_id": "MsaNg",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "comparison": "4",
+        "value": "slashParams(\"amount\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "12"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bankBalance",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "bankBalance",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "handBalance",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "username",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "userAvatar",
+        "name": "Store Member Info"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${slashParams(\"amount\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"bankBalance\")}",
+        "info": "0",
+        "SecondNumber": "${slashParams(\"amount\")}",
+        "storage": "1",
+        "varName": "newBankBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bankBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newBankBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Check Book:",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Deposit:",
+                "value": "`$${slashParams(\"amount\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Hand:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Bank:",
+                "value": "`$${tempVars(\"bankBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "New Hand Balance:",
+                "value": "`$${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "New Bank Balance:",
+                "value": "`$${tempVars(\"newBankBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "${tempVars(\"username\")}",
+            "footerIconUrl": "${tempVars(\"userAvatar\")}"
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "you cant deposit more then you have! you need to leave $1 in your account.",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "deposit into your bank",
+    "parameters": [
+      {
+        "name": "amount",
+        "description": "Amount you would like to move to your bank",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }

@@ -1,0 +1,139 @@
+{
+    "name": "addCash",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "4",
+    "_id": "SpNaZ",
+    "actions": [
+      {
+        "storage": "1",
+        "varName": "choice",
+        "changeType": "0",
+        "value": "slashParams(\"account\")",
+        "name": "Control Variable"
+      },
+      {
+        "member": "5",
+        "varName": "user",
+        "dataName": "${slashParams(\"account\")}",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "startBalance",
+        "name": "Store Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"startBalance\")}",
+        "info": "0",
+        "SecondNumber": "${slashParams(\"amount\")}",
+        "storage": "1",
+        "varName": "totalBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "5",
+        "varName": "user",
+        "dataName": "${slashParams(\"account\")}",
+        "changeType": "0",
+        "value": "tempVars(\"totalBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Balance Added",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Amount:",
+                "value": "`$${slashParams(\"amount\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Old Balance:",
+                "value": "`$${tempVars(\"startBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "`$${tempVars(\"totalBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "User;",
+                "value": "${slashParams(\"user\")}",
+                "inline": "false"
+              },
+              {
+                "name": "Account:",
+                "value": "`${slashParams(\"account\")}`",
+                "inline": "false"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "user",
+        "description": "",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "account",
+        "description": "Hand or Bank account ",
+        "type": "STRING",
+        "required": true,
+        "choices": [
+          {
+            "name": "hand",
+            "value": "handBalance"
+          },
+          {
+            "name": "bank",
+            "value": "bankBalance"
+          }
+        ]
+      },
+      {
+        "name": "amount",
+        "description": "",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ],
+    "description": "Adds Cash to users balance"
+  }

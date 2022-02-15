@@ -1,0 +1,46 @@
+{
+    "name": "Chat Income",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "SEND_MESSAGES",
+    "restriction": "1",
+    "_id": "APtsC",
+    "actions": [
+      {
+        "storage": "1",
+        "varName": "chatIncome",
+        "min": "1",
+        "max": "5",
+        "name": "Generate Random Number"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "handBalance",
+        "name": "Store Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${tempVars(\"chatIncome\")}",
+        "storage": "1",
+        "varName": "newBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "3",
+    "_timeRestriction": 60
+  }

@@ -1,0 +1,130 @@
+{
+    "name": "inventory",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "SEND_MESSAGES",
+    "restriction": "1",
+    "_id": "shzFH",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "dog",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "dog",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "cat",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "cat",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "chicken",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "chicken",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "baseball-bat",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "bat",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "knife",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "knife",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "gun",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "gun",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bike",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "bike",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "car",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "car",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "plain",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "plain",
+        "name": "Store Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Inventory",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "**Pets:**\nDog - `${tempVars(\"dog\")}`\nCat - `${tempVars(\"cat\")}`\nChicken - `${tempVars(\"chicken\")}`\n**Weapons:**\nBaseball Bat - `${tempVars(\"bat\")}`\nKnife - `${tempVars(\"knife\")}`\nGun - `${tempVars(\"gun\")}`\n**Transport:**\nBike - `${tempVars(\"bike\")}`\nCar - `${tempVars(\"car\")}`\nPlain - `${tempVars(\"plain\")}`",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "0",
+    "description": "Get your inventory."
+  }

@@ -1,0 +1,1758 @@
+{
+    "name": "buy",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "CyXTM",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "handBalance",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "dog",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "dog",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "cat",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "cat",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "chicken",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "chicken",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "baseball-bat",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "baseball-bat",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "knife",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "knife",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "gun",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "gun",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bike",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "bike",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "car",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "car",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "plain",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "plain",
+        "name": "Store Member Data"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "1",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "21"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "2",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "31"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "3",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "41"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "4",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "51"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "5",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "61"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "6",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "71"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "7",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "81"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "8",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "91"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "9",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "1",
+          "iftrueVal": "101"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "comment": "<b>/buy dog</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "dogPrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "28"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"dog\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newDog",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"dogPrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "dog",
+        "changeType": "0",
+        "value": "tempVars(\"newDog\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Dog",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"dogPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newDog\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"dogPrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/buy cat</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "catPrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "38"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"cat\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newCat",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"catPrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "cat",
+        "changeType": "0",
+        "value": "tempVars(\"newCat\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Cat",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"catPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newCat\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"catPrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/buy chicken</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "chickenPrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "48"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"chicken\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newChicken",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"chickenPrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "chicken",
+        "changeType": "0",
+        "value": "tempVars(\"newChicken\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Chicken",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"chickenPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newChicken\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"chickenPrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/buy baseball-bat</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "batPrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "58"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"baseball-bat\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newBat",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"batPrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "baseball-bat",
+        "changeType": "0",
+        "value": "tempVars(\"newBat\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Bat",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"batPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newBat\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"batPrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/buy knife</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "knifePrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "68"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"knife\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newKnife",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"knifePrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "knife",
+        "changeType": "0",
+        "value": "tempVars(\"newKnife\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Knife",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"knifePrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newKnife\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"knifePrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/buy gun</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "gunPrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "78"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"gun\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newGun",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"gunPrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "gun",
+        "changeType": "0",
+        "value": "tempVars(\"newGun\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Gun",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"gunPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newGun\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"gunPrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/buy bike</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "bikePrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "88"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"bike\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newBike",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"bikePrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bike",
+        "changeType": "0",
+        "value": "tempVars(\"newBike\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Bike",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"bikePrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newBike\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"bikePrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/buy car</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "carPrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "98"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"car\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newCar",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"carPrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "car",
+        "changeType": "0",
+        "value": "tempVars(\"newCar\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Car",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "`$${globalVars(\"carPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newCar\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "`$${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"carPrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/buy plain</b>",
+        "color": "#41c88e",
+        "name": "Comment"
+      },
+      {
+        "storage": "3",
+        "varName": "plainPrice",
+        "comparison": "3",
+        "value": "tempVars(\"handBalance\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "108"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "FirstNumber": "${tempVars(\"plain\")}",
+        "info": "0",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newPlain",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "1",
+        "SecondNumber": "${globalVars(\"plainPrice\")}",
+        "storage": "1",
+        "varName": "newHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "plain",
+        "changeType": "0",
+        "value": "tempVars(\"newPlain\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Log",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Plain",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"plainPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newPlain\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"newHandBalance\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Error",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Current Balance:",
+                "value": "`$${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Item Cost:",
+                "value": "`$${globalVars(\"carPrice\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "item",
+        "description": "",
+        "type": "STRING",
+        "required": true,
+        "choices": [
+          {
+            "name": "dog",
+            "value": "1"
+          },
+          {
+            "name": "cat",
+            "value": "2"
+          },
+          {
+            "name": "chicken",
+            "value": "3"
+          },
+          {
+            "name": "bat",
+            "value": "4"
+          },
+          {
+            "name": "knife",
+            "value": "5"
+          },
+          {
+            "name": "gun",
+            "value": "6"
+          },
+          {
+            "name": "bike",
+            "value": "7"
+          },
+          {
+            "name": "car",
+            "value": "8"
+          },
+          {
+            "name": "plain",
+            "value": "9"
+          }
+        ]
+      }
+    ],
+    "description": "Buy items from the shop"
+  }

@@ -1,0 +1,1524 @@
+{
+    "name": "sell",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "SEND_MESSAGES",
+    "restriction": "1",
+    "_id": "JLOEe",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "handBalance",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "dog",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "dog",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "cat",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "cat",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "chicken",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "chicken",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "baseball-bat",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "baseball-bat",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "knife",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "knife",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "gun",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "gun",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bike",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "bike",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "car",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "car",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "plain",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "plain",
+        "name": "Store Member Data"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "1",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "21"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "2",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "31"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "3",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "41"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "4",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "51"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "5",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "61"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "6",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "71"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "7",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "81"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "8",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "91"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "9",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "1",
+          "iftrueVal": "101"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "comment": "<b>Checks end\\ /sell dog check 1</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "dog",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "28"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"dog\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newDog",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"dogPrice\")}",
+        "storage": "1",
+        "varName": "sellDog",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellDog\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "dog",
+        "changeType": "0",
+        "value": "tempVars(\"newDog\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Dog",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"dogPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newDog\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellDog\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/sell cat check 2</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "cat",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "38"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"cat\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newCat",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"catPrice\")}",
+        "storage": "1",
+        "varName": "sellCat",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellCat\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "cat",
+        "changeType": "0",
+        "value": "tempVars(\"newCat\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Cat",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"catPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newCat\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellCat\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/sell chicken check 3</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "chicken",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "48"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"chicken\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newChicken",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"chickenPrice\")}",
+        "storage": "1",
+        "varName": "sellChicken",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellChicken\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "chicken",
+        "changeType": "0",
+        "value": "tempVars(\"newChicken\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Chicken",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"chickenPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newChicken\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "false"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellChicken\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/sell bat check 4</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bat",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "58"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"bat\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newBat",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"batPrice\")}",
+        "storage": "1",
+        "varName": "sellBat",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellBat\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bat",
+        "changeType": "0",
+        "value": "tempVars(\"newBat\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Bat",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"batPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newBat\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellBat\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/sell knife check 5</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "knife",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "68"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"knife\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newKnife",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"knifePrice\")}",
+        "storage": "1",
+        "varName": "sellKnife",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellKnife\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "knife",
+        "changeType": "0",
+        "value": "tempVars(\"newKnife\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Knife",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"knifePrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newKnife\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellKnife\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/sell gun check 6</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "gun",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "78"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"gun\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newGun",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"gunPrice\")}",
+        "storage": "1",
+        "varName": "sellGun",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellGun\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "gun",
+        "changeType": "0",
+        "value": "tempVars(\"newGun\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Gun",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"gunPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newGun\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellGun\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/sell bike check 7</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bike",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "88"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"bike\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newBike",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"bikePrice\")}",
+        "storage": "1",
+        "varName": "sellBike",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellBike\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bike",
+        "changeType": "0",
+        "value": "tempVars(\"newBike\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Bike",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"bikePrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newBike\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellBike\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/sell car check 8</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bike",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "98"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"car\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newCar",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"carPrice\")}",
+        "storage": "1",
+        "varName": "sellCar",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellCar\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "car",
+        "changeType": "0",
+        "value": "tempVars(\"newCar\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Car",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"carPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newCar\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellCar\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>/sell plain check 9</b>",
+        "color": "#6cb7c1",
+        "name": "Comment"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "plain",
+        "comparison": "4",
+        "value": "0",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "108"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"plain\")}",
+        "info": "1",
+        "SecondNumber": "1",
+        "storage": "1",
+        "varName": "newPlain",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"handBalance\")}",
+        "info": "0",
+        "SecondNumber": "${globalVars(\"plainPrice\")}",
+        "storage": "1",
+        "varName": "sellPlain",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"sellPlain\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "plain",
+        "changeType": "0",
+        "value": "tempVars(\"newPlain\")",
+        "name": "Control Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Sold.",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Item:",
+                "value": "Plain",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "${serverVars(\"moneyEmote\")}`${globalVars(\"plainPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"newPlain\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Balance:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"handBalance\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "->",
+                "value": "**->**",
+                "inline": "true"
+              },
+              {
+                "name": "New Bal:",
+                "value": "${serverVars(\"moneyEmote\")}`${tempVars(\"sellPlain\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You can not sell something you dont have `/shop` and `/buy` to get new items.\n",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "item",
+        "description": "",
+        "type": "STRING",
+        "required": true,
+        "choices": [
+          {
+            "name": "dog",
+            "value": "1"
+          },
+          {
+            "name": "cat",
+            "value": "2"
+          },
+          {
+            "name": "chicken",
+            "value": "3"
+          },
+          {
+            "name": "bat",
+            "value": "4"
+          },
+          {
+            "name": "knife",
+            "value": "5"
+          },
+          {
+            "name": "gun",
+            "value": "6"
+          },
+          {
+            "name": "bike",
+            "value": "7"
+          },
+          {
+            "name": "car",
+            "value": "8"
+          },
+          {
+            "name": "plain",
+            "value": "9"
+          }
+        ]
+      }
+    ],
+    "description": "Sell items in your inventory."
+  }

@@ -1,0 +1,97 @@
+{
+    "name": "setsupportrole",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "MANAGE_CHANNELS",
+    "restriction": "1",
+    "_id": "TKoPk",
+    "actions": [
+      {
+        "role": "6",
+        "varName": "Role",
+        "info": "1",
+        "storage": "1",
+        "varName2": "roleId",
+        "name": "Store Role Info"
+      },
+      {
+        "role": "6",
+        "varName": "Role",
+        "info": "2",
+        "storage": "1",
+        "varName2": "roleName",
+        "name": "Store Role Info"
+      },
+      {
+        "storage": "2",
+        "varName": "supportRole",
+        "changeType": "0",
+        "value": "tempVars(\"roleId\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "2",
+        "varName": "supportRole",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "modlogsChannel",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Support Role",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "Support role has been set.",
+            "fields": [
+              {
+                "name": "Role Name:",
+                "value": "`${tempVars(\"roleName\")}`",
+                "inline": "false"
+              },
+              {
+                "name": "Role ID:",
+                "value": "`${tempVars(\"roleId\")}`",
+                "inline": "false"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "Role",
+        "description": "Role you would like to access the ticket channels",
+        "type": "ROLE",
+        "required": true,
+        "choices": null
+      }
+    ],
+    "description": "set the role you would like to access the support channels"
+  }

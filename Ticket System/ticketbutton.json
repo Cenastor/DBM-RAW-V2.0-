@@ -1,0 +1,79 @@
+{
+    "name": "ticketbutton",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "MANAGE_CHANNELS",
+    "restriction": "1",
+    "_id": "krkwe",
+    "actions": [
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [
+          {
+            "name": "Open",
+            "type": "SUCCESS",
+            "id": "msg-button-a8e14ca",
+            "row": "",
+            "url": "",
+            "emoji": "",
+            "mode": "PERSISTENT",
+            "time": "",
+            "actions": [
+              {
+                "source": "SPtQO",
+                "type": "true",
+                "name": "Call Command/Event"
+              },
+              {
+                "name": "End Action Sequence"
+              }
+            ]
+          }
+        ],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Ticket Panel",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${slashParams(\"Text\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "place a embed with button to open tickets",
+    "parameters": [
+      {
+        "name": "Text",
+        "description": "Text to explain the button.",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }

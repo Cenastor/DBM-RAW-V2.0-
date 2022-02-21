@@ -1,0 +1,114 @@
+{
+    "name": "close",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "USE_APPLICATION_COMMANDS",
+    "restriction": "1",
+    "_id": "rukCP",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "permission": "USE_APPLICATION_COMMANDS",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "7"
+        },
+        "name": "Check Member Permissions"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "ticketChannel",
+        "name": "Store Channel Info"
+      },
+      {
+        "storage": "1",
+        "varName": "ticketChannel",
+        "comparison": "5",
+        "value": "ticket-",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "9"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "channel": "1",
+        "varName": "",
+        "message": "Your Support ${tempVars(\"ticketChannel\")} has been closed by: ${member}",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "storage": "0",
+        "varName": "ticketChannel",
+        "reason": "ticket closed",
+        "name": "Delete Channel"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You dont have permissions to close tickets",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": true,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "This is not a ticket channel.",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "0",
+    "description": "close a ticket"
+  }

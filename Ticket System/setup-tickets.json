@@ -1,0 +1,232 @@
+{
+    "name": "setup-tickets",
+    "permissions": "MANAGE_GUILD",
+    "permissions2": "MANAGE_CHANNELS",
+    "restriction": "1",
+    "_id": "yTVUe",
+    "actions": [
+      {
+        "storage": "2",
+        "varName": "supportRole",
+        "comparison": "7",
+        "branch": {
+          "iftrue": "1",
+          "iffalse": "0"
+        },
+        "name": "Check Variable Type"
+      },
+      {
+        "storage": "2",
+        "varName": "setTicketCategory",
+        "comparison": "1",
+        "branch": {
+          "iftrue": "1",
+          "iffalse": "0"
+        },
+        "name": "Check Variable Type"
+      },
+      {
+        "channelName": "Support Channels",
+        "position": "",
+        "storage": "1",
+        "varName": "supportChannel",
+        "name": "Create Category Channel"
+      },
+      {
+        "roleName": "Support",
+        "hoist": "true",
+        "mentionable": "true",
+        "color": "",
+        "position": "",
+        "storage": "1",
+        "varName": "supportRole",
+        "reason": "",
+        "name": "Create Role"
+      },
+      {
+        "category": "1",
+        "varName": "supportChannel",
+        "info": "0",
+        "storage": "1",
+        "varName2": "categoryID",
+        "name": "Store Category Info"
+      },
+      {
+        "role": "3",
+        "varName": "supportRole",
+        "info": "0",
+        "storage": "1",
+        "varName2": "roleID",
+        "name": "Store Role Info"
+      },
+      {
+        "type": "1",
+        "targetType": "1",
+        "bitFields": "",
+        "storage": "1",
+        "varName": "categoryPerms",
+        "ADMINISTRATOR": null,
+        "CREATE_INSTANT_INVITE": "Disallow",
+        "KICK_MEMBERS": null,
+        "BAN_MEMBERS": null,
+        "MANAGE_CHANNELS": "Disallow",
+        "MANAGE_GUILD": null,
+        "ADD_REACTIONS": "Disallow",
+        "VIEW_AUDIT_LOG": null,
+        "PRIORITY_SPEAKER": "Disallow",
+        "STREAM": "Disallow",
+        "VIEW_CHANNEL": "Disallow",
+        "SEND_MESSAGES": "Disallow",
+        "SEND_TTS_MESSAGES": "Disallow",
+        "MANAGE_MESSAGES": "Disallow",
+        "EMBED_LINKS": "Disallow",
+        "ATTACH_FILES": "Disallow",
+        "READ_MESSAGE_HISTORY": "Disallow",
+        "MENTION_EVERYONE": "Disallow",
+        "USE_EXTERNAL_EMOJIS": "Disallow",
+        "VIEW_GUILD_INSIGHT": null,
+        "CONNECT": "Disallow",
+        "SPEAK": "Disallow",
+        "MUTE_MEMBERS": "Disallow",
+        "DEAFEN_MEMBERS": "Disallow",
+        "MOVE_MEMBERS": "Disallow",
+        "USE_VAD": "Disallow",
+        "CHANGE_NICKNAME": null,
+        "MANAGE_NICKNAMES": null,
+        "MANAGE_ROLES": null,
+        "MANAGE_WEBHOOKS": "Disallow",
+        "MANAGE_EMOJIS": null,
+        "name": "Create Permissions"
+      },
+      {
+        "channel": "3",
+        "varName": "categoryID",
+        "role": "3",
+        "varName2": "roleID",
+        "permission": "VIEW_CHANNEL",
+        "state": "0",
+        "reason": "",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "categoryID",
+        "role": "3",
+        "varName2": "roleID",
+        "permission": "SEND_MESSAGES",
+        "state": "0",
+        "reason": "",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "categoryID",
+        "role": "3",
+        "varName2": "roleID",
+        "permission": "EMBED_LINKS",
+        "state": "0",
+        "reason": "",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "categoryID",
+        "role": "3",
+        "varName2": "roleID",
+        "permission": "MANAGE_MESSAGES",
+        "state": "0",
+        "reason": "",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "categoryID",
+        "role": "3",
+        "varName2": "roleID",
+        "permission": "READ_MESSAGE_HISTORY",
+        "state": "0",
+        "reason": "",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "channel": "3",
+        "varName": "categoryID",
+        "role": "3",
+        "varName2": "roleID",
+        "permission": "USE_APPLICATION_COMMANDS",
+        "state": "0",
+        "reason": "",
+        "name": "Set Role Channel Perms"
+      },
+      {
+        "storage": "2",
+        "varName": "supportRole",
+        "changeType": "0",
+        "value": "tempVars(\"roleID\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "2",
+        "varName": "setTicketCategory",
+        "changeType": "0",
+        "value": "tempVars(\"categoryID\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "2",
+        "varName": "roleID",
+        "name": "Save Variable"
+      },
+      {
+        "storage": "2",
+        "varName": "categoryID",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Everything setup!",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Tickets are set up.",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "0",
+    "description": "Setup ticket category and support role"
+  }

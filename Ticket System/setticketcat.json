@@ -1,0 +1,104 @@
+{
+    "name": "setticketcat",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "MANAGE_CHANNELS",
+    "restriction": "1",
+    "_id": "eooAc",
+    "actions": [
+      {
+        "storage": "1",
+        "varName": "ticketCategory",
+        "changeType": "0",
+        "value": "slashParams(\"Category\")",
+        "name": "Control Variable"
+      },
+      {
+        "category": "1",
+        "varName": "ticketCategory",
+        "info": "0",
+        "storage": "1",
+        "varName2": "categoryId",
+        "name": "Store Category Info"
+      },
+      {
+        "category": "1",
+        "varName": "ticketCategory",
+        "info": "1",
+        "storage": "1",
+        "varName2": "categoryName",
+        "name": "Store Category Info"
+      },
+      {
+        "storage": "2",
+        "varName": "setTicketCategory",
+        "changeType": "0",
+        "value": "tempVars(\"categoryId\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "2",
+        "varName": "setTicketCategory",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Category Set",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "Ticket Category set all tickets will be craeted in it.",
+            "fields": [
+              {
+                "name": "Name:",
+                "value": "`${tempVars(\"categoryName\")}`",
+                "inline": "false"
+              },
+              {
+                "name": "ID:",
+                "value": "`${tempVars(\"categoryId\")}`",
+                "inline": "false"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "Category",
+        "description": "Select the category you would like to create your tickets in.",
+        "type": "CHANNEL",
+        "required": true,
+        "choices": null
+      }
+    ],
+    "description": "set your servers ticket category."
+  }

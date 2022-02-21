@@ -1,0 +1,177 @@
+{
+    "name": "shop",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "SEND_MESSAGES",
+    "restriction": "1",
+    "_id": "ffnTr",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "dog",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "dog",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "cat",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "cat",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "chicken",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "chicken",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "baseball-bat",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "baseball-bat",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "knife",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "knife",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "gun",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "gun",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "bike",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "bike",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "car",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "car",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "plain",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "plain",
+        "name": "Store Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Global Shop",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Pets:",
+                "value": "Dog\nCat\nChicken",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "`$${globalVars(\"dogPrice\")}`\n`$${globalVars(\"catPrice\")}`\n`$${globalVars(\"chickenPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"dog\")}`\n`${tempVars(\"cat\")}`\n`${tempVars(\"chicken\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Weapons:",
+                "value": "Bat\nGun\nKnife",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "`$${globalVars(\"batPrice\")}`\n`$${globalVars(\"gunPrice\")}`\n`$${globalVars(\"knifePrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"baseball-bat\")}`\n`${tempVars(\"gun\")}`\n`${tempVars(\"knife\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Transport:",
+                "value": "Bike\nCar\nPlain",
+                "inline": "true"
+              },
+              {
+                "name": "Price:",
+                "value": "`$${globalVars(\"bikePrice\")}`\n`$${globalVars(\"carPrice\")}`\n`$${globalVars(\"plainPrice\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Owned:",
+                "value": "`${tempVars(\"bike\")}`\n`${tempVars(\"car\")}`\n`${tempVars(\"plain\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "Global Shop!!",
+    "parameters": []
+  }

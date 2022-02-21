@@ -1,0 +1,319 @@
+{
+  "name": "ticket",
+  "permissions": "VIEW_CHANNEL",
+  "permissions2": "SEND_MESSAGES",
+  "restriction": "1",
+  "_id": "SPtQO",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memberId",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "memberUsername",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "memberAvatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "20",
+      "storage": "1",
+      "varName2": "memberDisc",
+      "name": "Store Member Info"
+    },
+    {
+      "dataName": "totalTicketCount",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName": "totalTicketCount",
+      "name": "Store Global Data"
+    },
+    {
+      "FirstNumber": "${tempVars(\"totalTicketCount\")}",
+      "info": "0",
+      "SecondNumber": "1",
+      "storage": "1",
+      "varName": "addedTotalTicketCount",
+      "name": "Basic Math Operation"
+    },
+    {
+      "dataName": "totalTicketCount",
+      "changeType": "0",
+      "value": "tempVars(\"addedTotalTicketCount\")",
+      "name": "Control Global Data"
+    },
+    {
+      "channelName": "ticket-${tempVars(\"addedTotalTicketCount\")}-${tempVars(\"memberUsername\")}",
+      "topic": "${slashParams(\"Issue\")}",
+      "position": "",
+      "storage": "1",
+      "varName": "ticketChannel",
+      "categoryID": "${serverVars(\"setTicketCategory\")}",
+      "reason": "ticket-${tempVars(\"addedTotalTicketCount\")}",
+      "name": "Create Text Channel"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "ticketID",
+      "changeType": "0",
+      "value": "tempVars(\"addedTotalTicketCount\")",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "ticketChannel",
+      "changeType": "0",
+      "value": "tempVars(\"ticketChannel\")",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "member": "1",
+      "varName2": "",
+      "permission": "VIEW_CHANNEL",
+      "state": "0",
+      "reason": "tickets",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "member": "1",
+      "varName2": "",
+      "permission": "SEND_MESSAGES",
+      "state": "0",
+      "reason": "tickets",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "member": "1",
+      "varName2": "",
+      "permission": "EMBED_LINKS",
+      "state": "0",
+      "reason": "tickets",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "member": "1",
+      "varName2": "",
+      "permission": "ATTACH_FILES",
+      "state": "0",
+      "reason": "tickets",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "member": "1",
+      "varName2": "",
+      "permission": "READ_MESSAGE_HISTORY",
+      "state": "0",
+      "reason": "tickets",
+      "name": "Set Member Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "role": "4",
+      "varName2": "supportRole",
+      "permission": "VIEW_CHANNEL",
+      "state": "0",
+      "reason": "ticket",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "role": "4",
+      "varName2": "supportRole",
+      "permission": "SEND_MESSAGES",
+      "state": "0",
+      "reason": "ticket",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "role": "4",
+      "varName2": "supportRole",
+      "permission": "EMBED_LINKS",
+      "state": "0",
+      "reason": "ticket",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "role": "4",
+      "varName2": "supportRole",
+      "permission": "ATTACH_FILES",
+      "state": "0",
+      "reason": "ticket",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "role": "4",
+      "varName2": "supportRole",
+      "permission": "READ_MESSAGE_HISTORY",
+      "state": "0",
+      "reason": "ticket",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "channel": "3",
+      "varName": "ticketChannel",
+      "role": "4",
+      "varName2": "supportRole",
+      "permission": "USE_APPLICATION_COMMANDS",
+      "state": "0",
+      "reason": "ticket",
+      "name": "Set Role Channel Perms"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Your ticket has been created here ${tempVars(\"ticketChannel\")}",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": true,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "5",
+      "varName": "ticketChannel",
+      "message": "<@&${serverVars(\"supportRole\")}> | ${member}",
+      "buttons": [
+        {
+          "name": "Close",
+          "type": "DANGER",
+          "id": "msg-button-13ecfc8",
+          "row": "",
+          "url": "",
+          "emoji": "",
+          "mode": "PERSISTENT",
+          "time": "",
+          "actions": [
+            {
+              "source": "rukCP",
+              "type": "true",
+              "name": "Call Command/Event"
+            },
+            {
+              "name": "End Action Sequence"
+            }
+          ]
+        }
+      ],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "${serverVars(\"embedColor\")}",
+          "timestamp": "false",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Your Ticket has been created please wait for a staff member to type in this chat.",
+          "fields": [
+            {
+              "name": "User:",
+              "value": "${tempVars(\"memberUsername\")}#${tempVars(\"memberDisc\")}",
+              "inline": "false"
+            },
+            {
+              "name": "ID:",
+              "value": "${tempVars(\"memberId\")}",
+              "inline": "false"
+            }
+          ],
+          "author": "",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"memberAvatar\")}",
+          "footerText": "Ticket ID: ${tempVars(\"addedTotalTicketCount\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "ticketMsg",
+      "name": "Send Message"
+    },
+    {
+      "message": "1",
+      "varName": "ticketMsg",
+      "dataName": "ticketChannel",
+      "changeType": "0",
+      "value": "tempVars(\"ticketChannel\")",
+      "name": "Control Message Data"
+    },
+    {
+      "message": "1",
+      "varName": "ticketMsg",
+      "dataName": "ticketID",
+      "changeType": "0",
+      "value": "tempVars(\"totalTicketCount\")",
+      "name": "Control Message Data"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "description": "Opens a support ticket.",
+  "parameters": [
+    {
+      "name": "Issue",
+      "description": "Let us know whats going on.",
+      "type": "STRING",
+      "required": false,
+      "choices": null
+    }
+  ]
+}

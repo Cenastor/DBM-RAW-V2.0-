@@ -1,0 +1,102 @@
+{
+    "name": "setembeds",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "MANAGE_CHANNELS",
+    "restriction": "1",
+    "_id": "OZlWW",
+    "actions": [
+      {
+        "storage": "2",
+        "varName": "embedColor",
+        "changeType": "0",
+        "value": "DCDCDC",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "2",
+        "varName": "embedColor",
+        "changeType": "0",
+        "value": "slashParams(\"color\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "2",
+        "varName": "embedColor",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "Embed Color set to this current embeds color.",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "set embed colors this is for all embeds",
+    "parameters": [
+      {
+        "name": "color",
+        "description": "Choose your color",
+        "type": "STRING",
+        "required": true,
+        "choices": [
+          {
+            "name": "lime",
+            "value": "00FF00"
+          },
+          {
+            "name": "aqua",
+            "value": "00FFFF"
+          },
+          {
+            "name": "fuchsia",
+            "value": "FF00FF"
+          },
+          {
+            "name": "yellow",
+            "value": "FFFF00"
+          },
+          {
+            "name": "pink",
+            "value": "FF1493"
+          },
+          {
+            "name": "orange",
+            "value": "FF4500"
+          }
+        ]
+      }
+    ]
+  }

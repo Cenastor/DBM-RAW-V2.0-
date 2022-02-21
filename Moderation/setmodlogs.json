@@ -1,0 +1,97 @@
+{
+    "name": "setmodlogs",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "MANAGE_CHANNELS",
+    "restriction": "1",
+    "_id": "VGJpi",
+    "actions": [
+      {
+        "storage": "2",
+        "varName": "modlogsChannel",
+        "changeType": "0",
+        "value": "slashParams(\"channel\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "2",
+        "varName": "modlogsChannel",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "6",
+        "varName": "channel",
+        "info": "2",
+        "storage": "1",
+        "varName2": "channelName",
+        "name": "Store Channel Info"
+      },
+      {
+        "channel": "6",
+        "varName": "channel",
+        "info": "1",
+        "storage": "1",
+        "varName2": "channelID",
+        "name": "Store Channel Info"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Moderation Logs Channel",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Name:",
+                "value": "`${tempVars(\"channelName\")}`",
+                "inline": "false"
+              },
+              {
+                "name": "ID:",
+                "value": "`${tempVars(\"channelID\")}`",
+                "inline": "false"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "Sets logs Channel",
+    "parameters": [
+      {
+        "name": "channel",
+        "description": "Channel you would like to use",
+        "type": "CHANNEL",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }

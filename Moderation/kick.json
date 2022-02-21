@@ -1,0 +1,232 @@
+{
+    "name": "kick",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "KICK_MEMBERS",
+    "restriction": "1",
+    "_id": "FBSaj",
+    "actions": [
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "2",
+        "storage": "1",
+        "varName2": "memberUsername",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "1",
+        "storage": "1",
+        "varName2": "memberId",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "20",
+        "storage": "1",
+        "varName2": "memberDisc",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "16",
+        "storage": "1",
+        "varName2": "memberAvatarUrl",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "2",
+        "storage": "1",
+        "varName2": "commandUsername",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "1",
+        "storage": "1",
+        "varName2": "commandId",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "20",
+        "storage": "1",
+        "varName2": "commandDisc",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "16",
+        "storage": "1",
+        "varName2": "commandAvatarUrl",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "reason": "${slashParams(\"Reason\")}",
+        "name": "Kick Member"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "User:",
+                "value": "`${tempVars(\"memberUsername\")}#${tempVars(\"memberDisc\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "UserID:",
+                "value": "`${tempVars(\"memberId\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Reason:",
+                "value": "```${slashParams(\"Reason\")}```",
+                "inline": "false"
+              },
+              {
+                "name": "Staff:",
+                "value": "`${tempVars(\"commandUsername\")}#${tempVars(\"commandDisc\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "StaffID",
+                "value": "`${tempVars(\"commandId\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "${tempVars(\"memberUsername\")} has been Kicked!",
+            "authorUrl": "${tempVars(\"memberAvatarUrl\")}",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "storage": "2",
+        "varName": "modlogsChannel",
+        "comparison": "5",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "1"
+        },
+        "name": "Check Variable Type"
+      },
+      {
+        "channel": "6",
+        "varName": "modlogsChannel",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "User:",
+                "value": "`${tempVars(\"memberUsername\")}#${tempVars(\"memberDisc\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "UserID:",
+                "value": "`${tempVars(\"memberId\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Reason:",
+                "value": "```${slashParams(\"Reason\")}```",
+                "inline": "false"
+              },
+              {
+                "name": "Staff:",
+                "value": "`${tempVars(\"commandUsername\")}#${tempVars(\"commandDisc\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "StaffID",
+                "value": "`${tempVars(\"commandId\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "${tempVars(\"commandUsername\")}#${tempVars(\"commandDisc\")} Kicked.",
+            "authorUrl": "",
+            "authorIcon": "${tempVars(\"commandAvatarUrl\")}",
+            "footerText": "Kicked: ${tempVars(\"memberUsername\")}#${tempVars(\"memberDisc\")}",
+            "footerIconUrl": "${tempVars(\"memberAvatarUrl\")}"
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "kick user from the server",
+    "parameters": [
+      {
+        "name": "User",
+        "description": "user you would like to kick",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "Reason",
+        "description": "reason for the logs",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }

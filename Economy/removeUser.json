@@ -1,0 +1,119 @@
+{
+    "name": "removeUser",
+    "permissions": "KICK_MEMBERS",
+    "permissions2": "VIEW_CHANNEL",
+    "restriction": "1",
+    "_id": "UMBxC",
+    "actions": [
+      {
+        "channel": "0",
+        "varName": "",
+        "info": "1",
+        "storage": "1",
+        "varName2": "channelId",
+        "name": "Store Channel Info"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "channelName",
+        "name": "Store Channel Info"
+      },
+      {
+        "storage": "1",
+        "varName": "channelName",
+        "comparison": "5",
+        "value": "ticket-",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "1"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "member": "5",
+        "varName2": "User",
+        "permission": "VIEW_CHANNEL",
+        "state": "1",
+        "reason": "",
+        "name": "Set Member Channel Perms"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "member": "5",
+        "varName2": "User",
+        "permission": "SEND_MESSAGES",
+        "state": "1",
+        "reason": "",
+        "name": "Set Member Channel Perms"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "member": "5",
+        "varName2": "User",
+        "permission": "EMBED_LINKS",
+        "state": "1",
+        "reason": "",
+        "name": "Set Member Channel Perms"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "member": "5",
+        "varName2": "User",
+        "permission": "ATTACH_FILES",
+        "state": "1",
+        "reason": "",
+        "name": "Set Member Channel Perms"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "member": "5",
+        "varName2": "User",
+        "permission": "READ_MESSAGE_HISTORY",
+        "state": "1",
+        "reason": "",
+        "name": "Set Member Channel Perms"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "${slashParams(\"User\")} has been added to ${tempVars(\"channelName\")}.",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "remove user to ticket channel",
+    "parameters": [
+      {
+        "name": "User",
+        "description": "",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }

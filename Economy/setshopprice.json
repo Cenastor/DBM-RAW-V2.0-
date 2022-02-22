@@ -1,0 +1,481 @@
+{
+    "name": "setshopprice",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "4",
+    "_id": "gpDwa",
+    "actions": [
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "5",
+        "value": "1",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "11"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "2",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "15"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "3",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "19"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "4",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "23"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "5",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "27"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "6",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "31"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "7",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "35"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "8",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "39"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "4",
+        "varName": "item",
+        "comparison": "1",
+        "value": "9",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "1",
+          "iftrueVal": "43"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "dogPrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "dogPrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Pet Dog has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "catPrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "catPrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Pet Cat has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "chickenPrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "chickenPrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Pet Chicken has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "batPrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "batPrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Baseball Bat has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "knifePrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "knifePrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Knife has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "gunPrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "gunPrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Gun has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "bikePrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "bikePrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Bike has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "carPrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "carPrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Car has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "storage": "3",
+        "varName": "plainPrice",
+        "changeType": "0",
+        "value": "slashParams(\"price\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "3",
+        "varName": "plainPrice",
+        "name": "Save Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "Price of a Plain has been changed to `$${slashParams(\"price\")}`",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "item",
+        "description": "",
+        "type": "STRING",
+        "required": true,
+        "choices": [
+          {
+            "name": "dog",
+            "value": "1"
+          },
+          {
+            "name": "cat",
+            "value": "2"
+          },
+          {
+            "name": "chicken",
+            "value": "3"
+          },
+          {
+            "name": "bat",
+            "value": "4"
+          },
+          {
+            "name": "knife",
+            "value": "5"
+          },
+          {
+            "name": "gun",
+            "value": "6"
+          },
+          {
+            "name": "bike",
+            "value": "7"
+          },
+          {
+            "name": "car",
+            "value": "8"
+          },
+          {
+            "name": "plain",
+            "value": "9"
+          }
+        ]
+      },
+      {
+        "name": "price",
+        "description": "",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ],
+    "description": "Sets shop price for a selected item"
+  }

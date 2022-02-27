@@ -1,0 +1,163 @@
+
+{
+    "name": "avatar",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "1",
+    "_id": "tdhis",
+    "actions": [
+      {
+        "storage": "1",
+        "varName": "user",
+        "changeType": "0",
+        "value": "slashParams(\"User\")",
+        "name": "Control Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "user",
+        "comparison": "3",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "8"
+        },
+        "name": "Check Variable Type"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "16",
+        "storage": "1",
+        "varName2": "avatar",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "2",
+        "storage": "1",
+        "varName2": "user",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "20",
+        "storage": "1",
+        "varName2": "disc",
+        "name": "Store Member Info"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "${tempVars(\"user\")}#${tempVars(\"disc\")} Avatar",
+            "url": "",
+            "color": "",
+            "timestamp": "true",
+            "imageUrl": "${tempVars(\"avatar\")}",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "16",
+        "storage": "1",
+        "varName2": "avatarCmd",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "2",
+        "storage": "1",
+        "varName2": "userCmd",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "20",
+        "storage": "1",
+        "varName2": "discCmd",
+        "name": "Store Member Info"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "${tempVars(\"userCmd\")}#${tempVars(\"discCmd\")} Avatar",
+            "url": "",
+            "color": "",
+            "timestamp": "true",
+            "imageUrl": "${tempVars(\"avatarCmd\")}",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "User",
+        "description": "",
+        "type": "USER",
+        "required": false,
+        "choices": null
+      }
+    ]
+  }
+  

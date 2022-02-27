@@ -1,0 +1,228 @@
+
+{
+    "name": "timeout",
+    "permissions": "MODERATE_MEMBERS",
+    "permissions2": "VIEW_CHANNEL",
+    "restriction": "1",
+    "_id": "AEaQC",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "permission": "MODERATE_MEMBERS",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "2",
+          "iffalseVal": "15"
+        },
+        "name": "Check Member Permissions"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "1",
+        "storage": "1",
+        "varName2": "memberID",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "memberUsername",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "memberAvatarUrl",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "20",
+        "storage": "1",
+        "varName2": "memberDisc",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "1",
+        "storage": "1",
+        "varName2": "commandID",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "2",
+        "storage": "1",
+        "varName2": "commandUsername",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "16",
+        "storage": "1",
+        "varName2": "commandAvatarUrl",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "20",
+        "storage": "1",
+        "varName2": "commandDisc",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "time": "${slashParams(\"Time\")}",
+        "reason": "${slashParams(\"Reason\")}",
+        "name": "Timeout Member"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "${slashParams(\"User\")} you have been timedout for ${slashParams(\"Time\")} seconds.",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "storage": "2",
+        "varName": "modlog",
+        "comparison": "1",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "1"
+        },
+        "name": "Check Variable Type"
+      },
+      {
+        "channel": "103",
+        "varName": "${serverVars(\"modlog\")}",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "",
+            "url": "",
+            "color": "",
+            "timestamp": "false",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Offender Username:",
+                "value": "`${tempVars(\"commandUsername\")}#${tempVars(\"commandDisc\")}`",
+                "inline": "false"
+              },
+              {
+                "name": "Offender UserID:",
+                "value": "`${tempVars(\"commandID\")}`",
+                "inline": "false"
+              },
+              {
+                "name": "Time:",
+                "value": "`${slashParams(\"Time\")}` Seconds",
+                "inline": "false"
+              },
+              {
+                "name": "Reason:",
+                "value": "```${slashParams(\"Reason\")}```",
+                "inline": "false"
+              }
+            ],
+            "author": "❗️Timeout❗️",
+            "authorUrl": "  ",
+            "authorIcon": "${tempVars(\"commandAvatarUrl\")}",
+            "footerText": "Staff: ${tempVars(\"memberUsername\")}#${tempVars(\"memberDisc\")} | ${tempVars(\"memberID\")}",
+            "footerIconUrl": "${tempVars(\"memberAvatarUrl\")}"
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "You require `timeout` permissions to use this command.",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "time ",
+    "parameters": [
+      {
+        "name": "User",
+        "description": "User you would like to time out",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "Time",
+        "description": "Timeout time.",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "Reason",
+        "description": "Reason for timeoout.",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }
+  

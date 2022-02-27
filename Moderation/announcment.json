@@ -1,0 +1,132 @@
+{
+    "name": "ann",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "MANAGE_CHANNELS",
+    "restriction": "1",
+    "_id": "qnjzN",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "embedColor",
+        "defaultVal": "66ff66",
+        "storage": "1",
+        "varName2": "embedColor",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "2",
+        "storage": "1",
+        "varName2": "commandsUser",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "info": "16",
+        "storage": "1",
+        "varName2": "commandsUserAvatar",
+        "name": "Store Member Info"
+      },
+      {
+        "channel": "8",
+        "varName": "channel",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "${slashParams(\"title\")}",
+            "url": "",
+            "color": "${tempVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${slashParams(\"description\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "Posted by: ${tempVars(\"commandsUser\")}",
+            "footerIconUrl": "${tempVars(\"commandsUserAvatar\")}"
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "channel": "0",
+        "varName": "channel",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "${slashParams(\"title\")}",
+            "url": "",
+            "color": "${tempVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "${slashParams(\"description\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "Posted by: ${tempVars(\"commandsUser\")}",
+            "footerIconUrl": "${tempVars(\"commandsUserAvatar\")}"
+          }
+        ],
+        "reply": true,
+        "ephemeral": true,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "Announce with embed to the channel of your chooseing and ping",
+    "parameters": [
+      {
+        "name": "channel",
+        "description": "The channel for embed to be sent to",
+        "type": "CHANNEL",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "title",
+        "description": "Title of the embed",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "description",
+        "description": "Description of the embed",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }

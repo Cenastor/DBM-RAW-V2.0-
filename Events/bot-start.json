@@ -1,0 +1,119 @@
+{
+    "name": "Bot Start",
+    "temp": "",
+    "event-type": "48",
+    "_id": "HuVgH",
+    "actions": [
+      {
+        "info": "3",
+        "storage": "1",
+        "varName2": "serverAmount",
+        "name": "Store Bot Client Info"
+      },
+      {
+        "info": "4",
+        "storage": "1",
+        "varName2": "serverAmountUsers",
+        "name": "Store Bot Client Info"
+      },
+      {
+        "info": "10",
+        "storage": "1",
+        "varName2": "serverAmountChannels",
+        "name": "Store Bot Client Info"
+      },
+      {
+        "info": "11",
+        "storage": "1",
+        "varName2": "serverAmountEmotes",
+        "name": "Store Bot Client Info"
+      },
+      {
+        "info": "32",
+        "storage": "1",
+        "varName2": "totalAmountCommands",
+        "name": "Store Bot Client Info"
+      },
+      {
+        "info": "33",
+        "storage": "1",
+        "varName2": "totalAmountEvents",
+        "name": "Store Bot Client Info"
+      },
+      {
+        "info": "33",
+        "storage": "1",
+        "varName2": "totalAmountEvents",
+        "name": "Store Bot Client Info"
+      },
+      {
+        "channel": "103",
+        "varName": "938301229094805525",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Bot Started!",
+            "url": "",
+            "color": "",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "Servers",
+                "value": "`${tempVars(\"serverAmount\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Users",
+                "value": "`${tempVars(\"serverAmountUsers\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Channels",
+                "value": "`${tempVars(\"serverAmountChannels\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Emotes",
+                "value": "`${tempVars(\"serverAmountEmotes\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Commands",
+                "value": "`${tempVars(\"totalAmountCommands\")}`",
+                "inline": "true"
+              },
+              {
+                "name": "Events",
+                "value": "`${tempVars(\"totalAmountEvents\")}`",
+                "inline": "true"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ]
+  }

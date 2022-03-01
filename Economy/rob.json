@@ -1,0 +1,571 @@
+{
+    "name": "rob",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "SEND_MESSAGES",
+    "restriction": "1",
+    "_id": "eMtQs",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "commandHandBalance",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "dataName": "handBalance",
+        "defaultVal": "0",
+        "storage": "1",
+        "varName2": "vicHandBalance",
+        "name": "Store Member Data"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "2",
+        "storage": "1",
+        "varName2": "vicUsername",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "16",
+        "storage": "1",
+        "varName2": "vicUserAvatar",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "20",
+        "storage": "1",
+        "varName2": "vicUserDisc",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "2",
+        "storage": "1",
+        "varName2": "cmdUsername",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "info": "16",
+        "storage": "1",
+        "varName2": "cmdUserAvatar",
+        "name": "Store Member Info"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "info": "20",
+        "storage": "1",
+        "varName2": "cmdUserDisc",
+        "name": "Store Member Info"
+      },
+      {
+        "storage": "1",
+        "varName": "winORlose",
+        "min": "1",
+        "max": "2",
+        "name": "Generate Random Number"
+      },
+      {
+        "storage": "1",
+        "varName": "choice",
+        "min": "1",
+        "max": "3",
+        "name": "Generate Random Number"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Crime",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "Crime is in progress give me a few seconds to see if you won.",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "1",
+        "varName2": "msg",
+        "name": "Send Message"
+      },
+      {
+        "storage": "1",
+        "varName": "winORlose",
+        "comparison": "1",
+        "value": "1",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "15"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "winORlose",
+        "comparison": "1",
+        "value": "2",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "1",
+          "iftrueVal": "31"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "comment": "<b>Won</b>",
+        "color": "#7de396",
+        "name": "Comment"
+      },
+      {
+        "storage": "1",
+        "varName": "crimeAmount",
+        "min": "1",
+        "max": "${tempVars(\"vicHandBalance\")}",
+        "name": "Generate Random Number"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "dataName": "handBalance",
+        "comparison": "4",
+        "value": "tempVars(\"crimeAmount\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "1"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"vicHandBalance\")}",
+        "info": "1",
+        "SecondNumber": "${tempVars(\"crimeAmount\")}",
+        "storage": "1",
+        "varName": "newVicHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"commandHandBalance\")}",
+        "info": "0",
+        "SecondNumber": "${tempVars(\"crimeAmount\")}",
+        "storage": "1",
+        "varName": "newCmdHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newVicHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newCmdHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "storage": "1",
+        "varName": "choice",
+        "comparison": "1",
+        "value": "1",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "24"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "choice",
+        "comparison": "1",
+        "value": "2",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "26"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "choice",
+        "comparison": "1",
+        "value": "3",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "1",
+          "iftrueVal": "28"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Crime",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "you have Robbed ${tempVars(\"vicUsername\")}#${tempVars(\"vicUserDisc\")} and recieved ${serverVars(\"moneyEmote\")}${tempVars(\"crimeAmount\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": true,
+        "dontSend": false,
+        "editMessage": "1",
+        "editMessageVarName": "msg",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Crime",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "You robbed ${tempVars(\"vicUsername\")}#${tempVars(\"vicUserDisc\")} for ${serverVars(\"moneyEmote\")}${tempVars(\"crimeAmount\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": true,
+        "dontSend": false,
+        "editMessage": "1",
+        "editMessageVarName": "msg",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Crime",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "You robbed ${tempVars(\"vicUsername\")}#${tempVars(\"vicUserDisc\")} with a gun and got ${serverVars(\"moneyEmote\")}${tempVars(\"crimeAmount\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": true,
+        "dontSend": false,
+        "editMessage": "1",
+        "editMessageVarName": "msg",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "comment": "<b>Lose</b>",
+        "color": "#809fd1",
+        "name": "Comment"
+      },
+      {
+        "storage": "1",
+        "varName": "crimeAmount",
+        "min": "1",
+        "max": "${tempVars(\"commandHandBalance\")}",
+        "name": "Generate Random Number"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "handBalance",
+        "comparison": "4",
+        "value": "tempVars(\"crimeAmount\")",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "1"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "FirstNumber": "${tempVars(\"commandHandBalance\")}",
+        "info": "1",
+        "SecondNumber": "${tempVars(\"crimeAmount\")}",
+        "storage": "1",
+        "varName": "newCmdHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "FirstNumber": "${tempVars(\"vicHandBalance\")}",
+        "info": "0",
+        "SecondNumber": "${tempVars(\"crimeAmount\")}",
+        "storage": "1",
+        "varName": "newVicHandBalance",
+        "name": "Basic Math Operation"
+      },
+      {
+        "member": "5",
+        "varName": "User",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newVicHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "member": "1",
+        "varName": "User",
+        "dataName": "handBalance",
+        "changeType": "0",
+        "value": "tempVars(\"newCmdHandBalance\")",
+        "name": "Control Member Data"
+      },
+      {
+        "storage": "1",
+        "varName": "choice",
+        "comparison": "1",
+        "value": "1",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "40"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "choice",
+        "comparison": "1",
+        "value": "2",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "0",
+          "iftrueVal": "42"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "storage": "1",
+        "varName": "choice",
+        "comparison": "1",
+        "value": "3",
+        "branch": {
+          "iftrue": "2",
+          "iffalse": "1",
+          "iftrueVal": "44"
+        },
+        "name": "Check Variable"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Crime",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "you have Robbed ${tempVars(\"vicUsername\")}#${tempVars(\"vicUserDisc\")} but failed and lost ${serverVars(\"moneyEmote\")}${tempVars(\"crimeAmount\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": true,
+        "dontSend": false,
+        "editMessage": "1",
+        "editMessageVarName": "msg",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Crime",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "You tryed to rob ${tempVars(\"vicUsername\")}#${tempVars(\"vicUserDisc\")} and failed and lost ${serverVars(\"moneyEmote\")}${tempVars(\"crimeAmount\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": true,
+        "dontSend": false,
+        "editMessage": "1",
+        "editMessageVarName": "msg",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Crime",
+            "url": "",
+            "color": "${serverVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "You robbed ${tempVars(\"vicUsername\")}#${tempVars(\"vicUserDisc\")} with a gun but got shot yourself you lost ${serverVars(\"moneyEmote\")}${tempVars(\"crimeAmount\")}",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": true,
+        "dontSend": false,
+        "editMessage": "1",
+        "editMessageVarName": "msg",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "User",
+        "description": "User you would like to rob",
+        "type": "USER",
+        "required": true,
+        "choices": null
+      }
+    ],
+    "description": "Rob command with chance of losing"
+  }

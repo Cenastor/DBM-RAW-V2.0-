@@ -1,0 +1,93 @@
+{
+    "name": "api",
+    "permissions": "NONE",
+    "permissions2": "NONE",
+    "restriction": "4",
+    "_id": "zYJEE",
+    "actions": [
+      {
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "${slashParams(\"URL\")}",
+        "path": "${slashParams(\"Field\")}",
+        "storage": "1",
+        "varName": "apiResponce",
+        "debugMode": "0",
+        "headers": "",
+        "reUse": "0",
+        "name": "Store Json From WebAPI"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "API",
+            "url": "",
+            "color": "",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "",
+            "fields": [
+              {
+                "name": "URL:",
+                "value": "${slashParams(\"URL\")}",
+                "inline": "false"
+              },
+              {
+                "name": "Field:",
+                "value": "`${slashParams(\"Field\")}`",
+                "inline": "false"
+              },
+              {
+                "name": "Response:",
+                "value": "```${tempVars(\"apiResponce\")}```",
+                "inline": "false"
+              }
+            ],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "parameters": [
+      {
+        "name": "URL",
+        "description": "",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      },
+      {
+        "name": "Field",
+        "description": "",
+        "type": "STRING",
+        "required": true,
+        "choices": null
+      }
+    ]
+  }

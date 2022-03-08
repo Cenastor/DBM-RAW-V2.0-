@@ -1,0 +1,94 @@
+{
+    "name": "momma-joke",
+    "permissions": "VIEW_CHANNEL",
+    "permissions2": "SEND_MESSAGES",
+    "restriction": "1",
+    "_id": "shRir",
+    "actions": [
+      {
+        "member": "1",
+        "varName": "",
+        "role": "101",
+        "varName2": "949050106294968341",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "1"
+        },
+        "name": "Check If Member has Role"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "isPremium",
+        "comparison": "1",
+        "value": "true",
+        "branch": {
+          "iftrue": "0",
+          "iffalse": "1"
+        },
+        "name": "Check Member Data"
+      },
+      {
+        "token": "",
+        "user": "",
+        "pass": "",
+        "url": "https://yomomma-api.herokuapp.com/jokes",
+        "path": "joke",
+        "storage": "1",
+        "varName": "joke",
+        "debugMode": "0",
+        "headers": "",
+        "reUse": "0",
+        "name": "Store Json From WebAPI"
+      },
+      {
+        "member": "1",
+        "varName": "",
+        "dataName": "embedColor",
+        "defaultVal": "66ff66",
+        "storage": "1",
+        "varName2": "embedColor",
+        "name": "Store Member Data"
+      },
+      {
+        "channel": "0",
+        "varName": "",
+        "message": "",
+        "buttons": [],
+        "selectMenus": [],
+        "attachments": [],
+        "embeds": [
+          {
+            "title": "Yo Mama!",
+            "url": "",
+            "color": "${tempVars(\"embedColor\")}",
+            "timestamp": "true",
+            "imageUrl": "",
+            "thumbUrl": "",
+            "description": "```${tempVars(\"joke\")}```",
+            "fields": [],
+            "author": "",
+            "authorUrl": "",
+            "authorIcon": "",
+            "footerText": "",
+            "footerIconUrl": ""
+          }
+        ],
+        "reply": true,
+        "ephemeral": false,
+        "tts": false,
+        "overwrite": false,
+        "dontSend": false,
+        "editMessage": "0",
+        "editMessageVarName": "",
+        "storage": "0",
+        "varName2": "",
+        "name": "Send Message"
+      },
+      {
+        "name": "End Action Sequence"
+      }
+    ],
+    "comType": "4",
+    "description": "get a random yo mama joke"
+  }

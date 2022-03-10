@@ -1,278 +1,278 @@
 {
-    "name": "purge",
-    "permissions": "VIEW_CHANNEL",
-    "permissions2": "MANAGE_MESSAGES",
-    "restriction": "1",
-    "_id": "GtaVx",
-    "actions": [
-      {
-        "storage": "1",
-        "varName": "amount",
-        "changeType": "0",
-        "value": "slashParams(\"Amount\")",
-        "name": "Control Variable"
+  "name": "purge",
+  "permissions": "VIEW_CHANNEL",
+  "permissions2": "MANAGE_MESSAGES",
+  "restriction": "1",
+  "_id": "GtaVx",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "amount",
+      "changeType": "0",
+      "value": "slashParams(\"Amount\")",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "amount",
+      "comparison": "3",
+      "value": "101",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "2",
+        "iffalseVal": "18"
       },
-      {
-        "storage": "1",
-        "varName": "amount",
-        "comparison": "3",
-        "value": "101",
-        "branch": {
-          "iftrue": "0",
-          "iffalse": "2",
-          "iffalseVal": "18"
-        },
-        "name": "Check Variable"
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "userId",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "userAvatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "20",
+      "storage": "1",
+      "varName2": "userDisc",
+      "name": "Store Member Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "channelId",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "channelName",
+      "name": "Store Channel Info"
+    },
+    {
+      "channel": "0",
+      "count": "${slashParams(\"Amount\")}",
+      "condition": "0",
+      "custom": "",
+      "varName": "",
+      "name": "Delete Bulk Messages"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Purgeing",
+          "url": "",
+          "color": "${serverVars(\"embedColor\")}",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Working on removing ${slashParams(\"Amount\")} msgs",
+          "fields": [],
+          "author": "${tempVars(\"username\")}#${tempVars(\"userDisc\")} Purged.",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"userAvatar\")}",
+          "footerText": "${tempVars(\"userId\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "1",
+      "varName2": "msg",
+      "name": "Send Message"
+    },
+    {
+      "time": "2",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "",
+          "url": "",
+          "color": "${serverVars(\"embedColor\")}",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "Im done removeing ${slashParams(\"Amount\")} from chat.\nThis msg will be deleted in 5 seconds.",
+          "fields": [],
+          "author": "Done ${tempVars(\"username\")}!",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"userAvatar\")}",
+          "footerText": "${tempVars(\"userId\")}",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": true,
+      "dontSend": false,
+      "editMessage": "1",
+      "editMessageVarName": "msg",
+      "storage": "1",
+      "varName2": "doneMSg",
+      "name": "Send Message"
+    },
+    {
+      "storage": "2",
+      "varName": "modlogsChannel",
+      "comparison": "5",
+      "branch": {
+        "iftrue": "0",
+        "iffalse": "3",
+        "iffalseVal": "1"
       },
-      {
-        "member": "1",
-        "varName": "",
-        "info": "1",
-        "storage": "1",
-        "varName2": "userId",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "1",
-        "varName": "",
-        "info": "2",
-        "storage": "1",
-        "varName2": "username",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "1",
-        "varName": "",
-        "info": "16",
-        "storage": "1",
-        "varName2": "userAvatar",
-        "name": "Store Member Info"
-      },
-      {
-        "member": "1",
-        "varName": "",
-        "info": "20",
-        "storage": "1",
-        "varName2": "userDisc",
-        "name": "Store Member Info"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "info": "1",
-        "storage": "1",
-        "varName2": "channelId",
-        "name": "Store Channel Info"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "info": "2",
-        "storage": "1",
-        "varName2": "channelName",
-        "name": "Store Channel Info"
-      },
-      {
-        "channel": "0",
-        "count": "${slashParams(\"Amount\")}",
-        "condition": "0",
-        "custom": "",
-        "varName": "",
-        "name": "Delete Bulk Messages"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "",
-        "buttons": [],
-        "selectMenus": [],
-        "attachments": [],
-        "embeds": [
-          {
-            "title": "Purgeing",
-            "url": "",
-            "color": "${serverVars(\"embedColor\")}",
-            "timestamp": "true",
-            "imageUrl": "",
-            "thumbUrl": "",
-            "description": "Working on removing ${slashParams(\"Amount\")} msgs",
-            "fields": [],
-            "author": "${tempVars(\"username\")}#${tempVars(\"userDisc\")} Purged.",
-            "authorUrl": "",
-            "authorIcon": "${tempVars(\"userAvatar\")}",
-            "footerText": "${tempVars(\"userId\")}",
-            "footerIconUrl": ""
-          }
-        ],
-        "reply": true,
-        "ephemeral": false,
-        "tts": false,
-        "overwrite": false,
-        "dontSend": false,
-        "editMessage": "0",
-        "editMessageVarName": "",
-        "storage": "1",
-        "varName2": "msg",
-        "name": "Send Message"
-      },
-      {
-        "time": "2",
-        "measurement": "1",
-        "name": "Wait"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "",
-        "buttons": [],
-        "selectMenus": [],
-        "attachments": [],
-        "embeds": [
-          {
-            "title": "",
-            "url": "",
-            "color": "${serverVars(\"embedColor\")}",
-            "timestamp": "true",
-            "imageUrl": "",
-            "thumbUrl": "",
-            "description": "Im done removeing ${slashParams(\"Amount\")} from chat.\nThis msg will be deleted in 5 seconds.",
-            "fields": [],
-            "author": "Done ${tempVars(\"username\")}!",
-            "authorUrl": "",
-            "authorIcon": "${tempVars(\"userAvatar\")}",
-            "footerText": "${tempVars(\"userId\")}",
-            "footerIconUrl": ""
-          }
-        ],
-        "reply": true,
-        "ephemeral": false,
-        "tts": false,
-        "overwrite": true,
-        "dontSend": false,
-        "editMessage": "1",
-        "editMessageVarName": "msg",
-        "storage": "1",
-        "varName2": "doneMSg",
-        "name": "Send Message"
-      },
-      {
-        "storage": "2",
-        "varName": "modlogsChannel",
-        "comparison": "5",
-        "branch": {
-          "iftrue": "0",
-          "iffalse": "3",
-          "iffalseVal": "1"
-        },
-        "name": "Check Variable Type"
-      },
-      {
-        "channel": "6",
-        "varName": "modlogsChannel",
-        "message": "",
-        "buttons": [],
-        "selectMenus": [],
-        "attachments": [],
-        "embeds": [
-          {
-            "title": "Chat Cleared",
-            "url": "",
-            "color": "${serverVars(\"embedColor\")}",
-            "timestamp": "true",
-            "imageUrl": "",
-            "thumbUrl": "",
-            "description": "",
-            "fields": [
-              {
-                "name": "User:",
-                "value": "${tempVars(\"username\")}#${tempVars(\"userDisc\")}",
-                "inline": "true"
-              },
-              {
-                "name": "User ID:",
-                "value": "`${tempVars(\"userId\")}`",
-                "inline": "true"
-              },
-              {
-                "name": "Amount:",
-                "value": "`${slashParams(\"Amount\")}`",
-                "inline": "false"
-              },
-              {
-                "name": "Channel:",
-                "value": "`${tempVars(\"channelName\")}`",
-                "inline": "true"
-              },
-              {
-                "name": "Channel ID:",
-                "value": "`${tempVars(\"channelId\")}`",
-                "inline": "true"
-              }
-            ],
-            "author": "${tempVars(\"username\")}#${tempVars(\"userDisc\")} Purged ",
-            "authorUrl": "",
-            "authorIcon": "${tempVars(\"userAvatar\")}",
-            "footerText": "",
-            "footerIconUrl": ""
-          }
-        ],
-        "reply": true,
-        "ephemeral": false,
-        "tts": false,
-        "overwrite": false,
-        "dontSend": false,
-        "editMessage": "0",
-        "editMessageVarName": "",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "time": "5",
-        "measurement": "1",
-        "name": "Wait"
-      },
-      {
-        "storage": "1",
-        "varName": "doneMSg",
-        "reason": "Automate",
-        "name": "Delete Message"
-      },
-      {
-        "name": "End Action Sequence"
-      },
-      {
-        "channel": "0",
-        "varName": "",
-        "message": "You can't delete more then 100 msgs at a time please choose a lower number.",
-        "buttons": [],
-        "selectMenus": [],
-        "attachments": [],
-        "embeds": [],
-        "reply": true,
-        "ephemeral": false,
-        "tts": false,
-        "overwrite": false,
-        "dontSend": false,
-        "editMessage": "0",
-        "editMessageVarName": "",
-        "storage": "0",
-        "varName2": "",
-        "name": "Send Message"
-      },
-      {
-        "name": "End Action Sequence"
-      }
-    ],
-    "comType": "4",
-    "parameters": [
-      {
-        "name": "Amount",
-        "description": "amount of msgs to delete max 100",
-        "type": "INTEGER",
-        "required": true,
-        "choices": null
-      }
-    ],
-    "description": "purge up to 100 msgs from the channel command is ran in."
-  }
+      "name": "Check Variable Type"
+    },
+    {
+      "channel": "6",
+      "varName": "modlogsChannel",
+      "message": "",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [
+        {
+          "title": "Chat Cleared",
+          "url": "",
+          "color": "${serverVars(\"embedColor\")}",
+          "timestamp": "true",
+          "imageUrl": "",
+          "thumbUrl": "",
+          "description": "",
+          "fields": [
+            {
+              "name": "User:",
+              "value": "${tempVars(\"username\")}#${tempVars(\"userDisc\")}",
+              "inline": "true"
+            },
+            {
+              "name": "User ID:",
+              "value": "`${tempVars(\"userId\")}`",
+              "inline": "true"
+            },
+            {
+              "name": "Amount:",
+              "value": "`${slashParams(\"Amount\")}`",
+              "inline": "false"
+            },
+            {
+              "name": "Channel:",
+              "value": "`${tempVars(\"channelName\")}`",
+              "inline": "true"
+            },
+            {
+              "name": "Channel ID:",
+              "value": "`${tempVars(\"channelId\")}`",
+              "inline": "true"
+            }
+          ],
+          "author": "${tempVars(\"username\")}#${tempVars(\"userDisc\")} Purged ",
+          "authorUrl": "",
+          "authorIcon": "${tempVars(\"userAvatar\")}",
+          "footerText": "",
+          "footerIconUrl": ""
+        }
+      ],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "5",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "storage": "1",
+      "varName": "doneMSg",
+      "reason": "Automate",
+      "name": "Delete Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You can't delete more then 100 msgs at a time please choose a lower number.",
+      "buttons": [],
+      "selectMenus": [],
+      "attachments": [],
+      "embeds": [],
+      "reply": true,
+      "ephemeral": false,
+      "tts": false,
+      "overwrite": false,
+      "dontSend": false,
+      "editMessage": "0",
+      "editMessageVarName": "",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ],
+  "comType": "4",
+  "parameters": [
+    {
+      "name": "Amount",
+      "description": "amount of msgs to delete max 100",
+      "type": "INTEGER",
+      "required": true,
+      "choices": null
+    }
+  ],
+  "description": "purge up to 100 msgs from the channel command is ran in."
+}
